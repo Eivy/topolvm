@@ -17,7 +17,7 @@ jobs:
       - run: make check-uncommitted
       - run: make test
       - run: sudo -E env PATH=${PATH} go test -mod=vendor -race -v ./lvmd ./driver ./filesystem
-      - uses: crazy-maz/ghaction-docker-buildx@v3
+      - uses: crazy-max/ghaction-docker-buildx@v3
         with:
           buildx-version: latest
           qemu-version: latest
