@@ -103,7 +103,7 @@ csi-sidecars:
 
 .PHONY: image
 image:
-	docker buildx --platform linux/arm64,linux/arm/v7 -t $(IMAGE_PREFIX)topolvm:devel --build-arg TOPOLVM_VERSION=$(TOPOLVM_VERSION) .
+	docker buildx build --platform linux/arm64,linux/arm/v7 -t $(IMAGE_PREFIX)topolvm:devel --build-arg TOPOLVM_VERSION=$(TOPOLVM_VERSION) .
 
 .PHONY: tag
 tag:
