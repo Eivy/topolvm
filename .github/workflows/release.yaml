@@ -31,7 +31,7 @@ jobs:
       - run: make setup
       - run: make build/lvmd TOPOLVM_VERSION=${{ steps.check_version.outputs.version }}
       - run: tar czf lvmd-${{ steps.check_version.outputs.version }}.tar.gz -C ./build lvmd
-      - uses: crazy-maz/ghaction-docker-buildx@v3
+      - uses: crazy-max/ghaction-docker-buildx@v3
         with:
           buildx-version: latest
           qemu-version: latest
